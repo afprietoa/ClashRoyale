@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@700&display=swap');
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Fonts */
+    --font-cursive:'Skranji', cursive;
+    /* Z-index */
+    --z-fixed: 100;
+    /* Color */
+    --color-blue-medium: rgba(18, 46, 205, 0.83);
+    --color-blue-intensive: rgba(18, 46, 205, 0.93);
+}
+body{
+    background: no-repeat center/cover url("../assets/images/background.png");
+    height: 100vh;
+}
+.container{
+    width: 90%;
+    margin: 3rem auto;
+    
+}
+/* MAIN CONTAINER */
+.main-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.main-container__left-arrow,
+.main-container__right-arrow{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    top:calc(80px -20px);
+    border: none;
+    cursor: pointer;
+    z-index: var(--z-fixed);
+    font-size: 60px;
+    color: #fff;
+    border-radius: 100%;
+    transition: 0.2 ease all;
+}
+.main-container__left-arrow{
+    background: gray;
+}
+.main-container__right-arrow{
+    background: var(--color-blue-medium);
+}
+.left-arrow--enable{
+    background: var(--color-blue-medium);
+}
+.right-arrow--enable{
+    background: gray;
+}
+/* .main-container__left-arrow:hover,
+.main-container__right-arrow:hover{
+    background: var(--color-blue-intensive);
+} */
+.main-container__left-arrow{
+    left: 10rem;
+}
+.main-container__right-arrow{
+    right: 10rem;
+}
+/* CAROUSEL */
+.carousel-container{
+    width: 80%;
+    margin: auto;
+    padding: 1.2rem 0;
+    overflow: hidden;
+}
+.carousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    min-width: 100%;
+    height: 80vh;
+    transition: 0.3s ease all;
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background: #fff;
+}
+.card__img{
+    height: 80%;
+}
+.card__name{
+    font-family: var(--font-cursive);
+    width: 10em;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--color-blue-medium);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/carousel.css">
+    <title>Clash Royale</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-container">
+            <button class="main-container__left-arrow" id="left-arrow">
+                <ion-icon name="chevron-back-circle-outline"></ion-icon>
+            </button>
+            <div class="carousel-container" id="carousel-container">
+                
+                    <div id="items" class="carousel"></div>
+                    <template id="template-card" class="carousel__item">
+                        <div class="card" id="card">
+                            <img alt="" class="card__img" id="img">
+                            <button class="card__name"></button>
+                        </div>
+                    </template>
+               
+            </div>
+            <button class="main-container__right-arrow" id="right-arrow">
+                <ion-icon name="chevron-forward-circle-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./scripts/carousel.js" type="module"></script>
+</body>
+</html>
